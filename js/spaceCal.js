@@ -10,9 +10,10 @@ export class Calculator{
     return this.ageSeconds;
   }
 
-  // compareDates(age,birthday){
-  //   //not sure what is asked of me
-  // }
+   compareDates(age,birthday){
+    let moment = moment();
+     console.log(moment);
+  }
 
   ageOnMercury(age){
     age = this.age;

@@ -12,6 +12,10 @@ describe('Calculator', function() {
     expect(ageTest.ageInSeconds(ageTest.age)).toEqual(ageTest.ageSeconds);
     })
 
+  it("takes a user birthday and return their current age and age in seconds", function(){
+    expect(ageTest.currentAge(ageTest.birthday)).toEqual("current age", "age in seconds");
+  })
+
   it("takes a users age and returns there new age in years on Mercury", function(){
     expect(ageTest.ageOnMercury(ageTest.age)).toEqual(ageTest.roundedMerYear);
     })
