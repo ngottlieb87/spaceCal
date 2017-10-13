@@ -10,11 +10,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Calculator = exports.Calculator = function () {
-  function Calculator(age, birthday) {
+  function Calculator(age) {
     _classCallCheck(this, Calculator);
 
     this.age = age;
-    this.birthday = birthday;
   }
 
   _createClass(Calculator, [{
@@ -22,48 +21,62 @@ var Calculator = exports.Calculator = function () {
     value: function ageInSeconds(age) {
       var earthSeconds = 31557600;
       var ageSeconds = age * earthSeconds;
-      return this.ageSeconds;
+      this.age = ageSeconds;
+      alert(this.age);
+      return this.age;
     }
 
-    // compareDates(age,birthday){
-    //   //not sure what is asked of me
+    //  currentAge(age, birthday){
+    //
     // }
 
   }, {
     key: "ageOnMercury",
     value: function ageOnMercury(age) {
+      alert(this.age);
       age = this.age;
       var merYear = 365 * .24;
       var userAgeOnMer = Math.round(age * 365 / merYear);
       var roundedMerYear = userAgeOnMer;
-      return this.roundedMerYear;
+      this.age = roundedMerYear;
+      alert(this.age);
+      return this.age;
     }
   }, {
     key: "ageOnVenus",
     value: function ageOnVenus(age) {
+      alert(this.age);
       age = this.age;
       var venYear = 365 * .62;
       var userAgeOnVen = Math.round(age * 365 / venYear);
       var roundedVenYear = userAgeOnVen;
-      return this.roundedVenYear;
+      this.age = roundedVenYear;
+      alert(this.age);
+      return this.age;
     }
   }, {
     key: "ageOnMars",
     value: function ageOnMars(age) {
+      alert(this.age);
       age = this.age;
       var marsYear = 365 * 1.88;
       var userAgeOnMars = Math.round(age * 365 / marsYear);
       var roundedMarsYear = userAgeOnMars;
-      return this.roundedMarsYear;
+      this.age = roundedMarsYear;
+      alert(this.age);
+      return this.age;
     }
   }, {
     key: "ageOnJupiter",
     value: function ageOnJupiter(age) {
+      alert(this.age);
       age = this.age;
       var jupYear = 365 * 11.86;
       var userAgeOnJup = Math.round(age * 365 / jupYear);
       var roundedJupYear = userAgeOnJup;
-      return this.roundedJupYear;
+      this.age = roundedJupYear;
+      alert(this.age);
+      return this.age;
     }
   }]);
 
@@ -76,5 +89,23 @@ var Calculator = exports.Calculator = function () {
 'use strict';
 
 var _spaceCal = require('./../js/spaceCal.js');
+
+$(document).ready(function () {
+  $('#planets').submit(function () {
+    event.preventDefault();
+    var age = $("#planetAge").val();
+
+    var newCalc = new _spaceCal.Calculator(age);
+
+    var mercury = newCalc.ageOnMercury();
+    var venus = newCalc.ageOnVenus();
+    var mars = newCalc.ageOnMars();
+    var jupiter = newCalc.ageOnJupiter();
+    $("#mer").text(mercury);
+    $("#ven").text(venus);
+    $("#mars").text(mars);
+    $("#jup").text(jupiter);
+  });
+});
 
 },{"./../js/spaceCal.js":1}]},{},[2]);
