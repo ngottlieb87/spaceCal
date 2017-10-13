@@ -1,6 +1,12 @@
 export class Calculator{
-  constructor(age, birthday){
+  constructor(age){
     this.age = age;
-    this.birthday = birthday;
+  }
+
+  ageInSeconds(age){
+    const earthSeconds = 31557600;
+    age = this.age;
+    age = age * earthSeconds;
+    return age;
   }
 }
