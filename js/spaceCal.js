@@ -33,10 +33,10 @@ export class Calculator{
 
   ageOnMars(age){
     age = this.age;
-    let merYear = 365 * .24;
-    let userAgeOnMer = (age*365)/merYear;
-    let roundedMerYear=userAgeOnMer.toFixed(2);
-    return this.roundedMerYear;
+    let marsYear = 365 * 1.88;
+    let userAgeOnMars = (age*365)/marsYear;
+    let roundedMarsYear=userAgeOnMars.toFixed(2);
+    return this.roundedMarsYear;
   }
   //
   // ageOnMercury(age){
