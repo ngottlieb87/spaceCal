@@ -1,6 +1,7 @@
 export class Calculator{
-  constructor(age){
+  constructor(age, birthday){
     this.age = age;
+    this.birthday = birthday;
   }
 
   ageInSeconds(age){
@@ -9,4 +10,12 @@ export class Calculator{
     age = age * earthSeconds;
     return age;
   }
-}
+
+  compareDates(age,birthday){
+    //not sure what is asked of me
+  }
+
+  // ageOnMercury(age){
+  //   merYear = 365 * .24;
+  // }
+};
