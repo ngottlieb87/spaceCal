@@ -23,11 +23,11 @@ _Enter a year and see how old you are on other planets. You can also check your 
 
 3. _`npm install`_
 
-4. _'npm install bower -g_
+4. _`npm install bower -g`_
 
-5. _bower install_
+5. _`bower install`_
 
-6. _gulp build_
+6. _`gulp build`_
 
 ## Languages Used
 _Javascript, Karma, NPM, Jasmine, Bootstrap, Bower, Gulp_

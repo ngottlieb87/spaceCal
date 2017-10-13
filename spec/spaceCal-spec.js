@@ -9,7 +9,7 @@ describe('Calculator', function() {
     });
 
   it("takes a user age and returns the age in seconds", function(){
-    expect(ageTest.ageInSeconds(ageTest.age)).toEqual(788940000);
+    expect(ageTest.ageInSeconds()).toEqual(788940000);
     })
 
   // it("takes a user birthday and return their current age and age in seconds", function(){
@@ -17,18 +17,18 @@ describe('Calculator', function() {
   // })
 
   it("takes a users age and returns there new age in years on Mercury", function(){
-    expect(ageTest.ageOnMercury(ageTest.age)).toEqual(104);
+    expect(ageTest.ageOnMercury()).toEqual(104);
     })
 
   it("takes a users age and returns there new age in years on Venus", function(){
-    expect(ageTest.ageOnVenus(ageTest.age)).toEqual(40);
+    expect(ageTest.ageOnVenus()).toEqual(40);
     })
 
   it("takes a users age and returns there new age in years on Mars", function(){
-    expect(ageTest.ageOnMars(ageTest.age)).toEqual(13);
+    expect(ageTest.ageOnMars()).toEqual(13);
     })
 
   it("takes a users age and returns there new age in years on Jupiter", function(){
-    expect(ageTest.ageOnJupiter(ageTest.age)).toEqual(2);
+    expect(ageTest.ageOnJupiter()).toEqual(2);
     })
 });

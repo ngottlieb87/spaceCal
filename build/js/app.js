@@ -18,64 +18,51 @@ var Calculator = exports.Calculator = function () {
 
   _createClass(Calculator, [{
     key: "ageInSeconds",
-    value: function ageInSeconds(age) {
+    value: function ageInSeconds() {
       var earthSeconds = 31557600;
-      var ageSeconds = age * earthSeconds;
+      var ageSeconds = this.age * earthSeconds;
       this.age = ageSeconds;
-      alert(this.age);
       return this.age;
     }
 
-    //  currentAge(age, birthday){
+    //  currentAge(age){
     //
     // }
 
   }, {
     key: "ageOnMercury",
-    value: function ageOnMercury(age) {
-      alert(this.age);
-      age = this.age;
+    value: function ageOnMercury() {
       var merYear = 365 * .24;
-      var userAgeOnMer = Math.round(age * 365 / merYear);
+      var userAgeOnMer = Math.round(this.age * 365 / merYear);
       var roundedMerYear = userAgeOnMer;
       this.age = roundedMerYear;
-      alert(this.age);
       return this.age;
     }
   }, {
     key: "ageOnVenus",
-    value: function ageOnVenus(age) {
-      alert(this.age);
-      age = this.age;
+    value: function ageOnVenus() {
       var venYear = 365 * .62;
-      var userAgeOnVen = Math.round(age * 365 / venYear);
+      var userAgeOnVen = Math.round(this.age * 365 / venYear);
       var roundedVenYear = userAgeOnVen;
       this.age = roundedVenYear;
-      alert(this.age);
       return this.age;
     }
   }, {
     key: "ageOnMars",
-    value: function ageOnMars(age) {
-      alert(this.age);
-      age = this.age;
+    value: function ageOnMars() {
       var marsYear = 365 * 1.88;
-      var userAgeOnMars = Math.round(age * 365 / marsYear);
+      var userAgeOnMars = Math.round(this.age * 365 / marsYear);
       var roundedMarsYear = userAgeOnMars;
       this.age = roundedMarsYear;
-      alert(this.age);
       return this.age;
     }
   }, {
     key: "ageOnJupiter",
-    value: function ageOnJupiter(age) {
-      alert(this.age);
-      age = this.age;
+    value: function ageOnJupiter() {
       var jupYear = 365 * 11.86;
-      var userAgeOnJup = Math.round(age * 365 / jupYear);
+      var userAgeOnJup = Math.round(this.age * 365 / jupYear);
       var roundedJupYear = userAgeOnJup;
       this.age = roundedJupYear;
-      alert(this.age);
       return this.age;
     }
   }]);
@@ -93,18 +80,14 @@ var _spaceCal = require('./../js/spaceCal.js');
 $(document).ready(function () {
   $('#planets').submit(function () {
     event.preventDefault();
-    var age = $("#planetAge").val();
+    var age = parseInt($("#planetAge").val());
 
     var newCalc = new _spaceCal.Calculator(age);
 
-    var mercury = newCalc.ageOnMercury();
-    var venus = newCalc.ageOnVenus();
-    var mars = newCalc.ageOnMars();
-    var jupiter = newCalc.ageOnJupiter();
-    $("#mer").text(mercury);
-    $("#ven").text(venus);
-    $("#mars").text(mars);
-    $("#jup").text(jupiter);
+    $("#mer").text(newCalc.ageOnMercury());
+    $("#ven").text(newCalc.ageOnVenus());
+    $("#mars").text(newCalc.ageOnMars());
+    $("#jup").text(newCalc.ageOnJupiter());
   });
 });
 
