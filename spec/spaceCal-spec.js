@@ -15,4 +15,8 @@ it("takes a user age and returns the age in seconds", function(){
 it("takes a users age and returns there new age in years on Mercury", function(){
   expect(ageTest.ageOnMercury(ageTest.age)).toEqual(ageTest.roundedMerYear);
   })
+
+  it("takes a users age and returns there new age in years on Venus", function(){
+    expect(ageTest.ageOnVenus(ageTest.age)).toEqual(ageTest.roundedVenYear);
+    })
 });

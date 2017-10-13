@@ -27,22 +27,23 @@ export class Calculator{
     let venYear = 365 * .62;
     let userAgeOnVen = (age*365)/venYear;
     let roundedVenYear=userAgeOnVen.toFixed(2);
+    alert(roundedVenYear);
     return this.roundedVenYear;
   }
 
-  ageOnMercury(age){
-    age = this.age;
-    let merYear = 365 * .24;
-    let userAgeOnMer = (age*365)/merYear;
-    let roundedMerYear=userAgeOnMer.toFixed(2);
-    return this.roundedMerYear;
-  }
-
-  ageOnMercury(age){
-    age = this.age;
-    let merYear = 365 * .24;
-    let userAgeOnMer = (age*365)/merYear;
-    let roundedMerYear=userAgeOnMer.toFixed(2);
-    return this.roundedMerYear;
-  }
+  // ageOnMercury(age){
+  //   age = this.age;
+  //   let merYear = 365 * .24;
+  //   let userAgeOnMer = (age*365)/merYear;
+  //   let roundedMerYear=userAgeOnMer.toFixed(2);
+  //   return this.roundedMerYear;
+  // }
+  //
+  // ageOnMercury(age){
+  //   age = this.age;
+  //   let merYear = 365 * .24;
+  //   let userAgeOnMer = (age*365)/merYear;
+  //   let roundedMerYear=userAgeOnMer.toFixed(2);
+  //   return this.roundedMerYear;
+  // }
 };
