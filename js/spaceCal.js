@@ -17,32 +17,32 @@ export class Calculator{
   ageOnMercury(age){
     age = this.age;
     let merYear = 365 * .24;
-    let userAgeOnMer = (age*365)/merYear;
-    let roundedMerYear=userAgeOnMer.toFixed(2);
+    let userAgeOnMer = Math.round((age*365)/merYear);
+    let roundedMerYear = userAgeOnMer;
     return this.roundedMerYear;
   }
 
   ageOnVenus(age){
     age = this.age;
     let venYear = 365 * .62;
-    let userAgeOnVen = (age*365)/venYear;
-    let roundedVenYear=userAgeOnVen.toFixed(2);
+    let userAgeOnVen = Math.round((age*365)/venYear);
+    let roundedVenYear = userAgeOnVen;
     return this.roundedVenYear;
   }
 
   ageOnMars(age){
     age = this.age;
     let marsYear = 365 * 1.88;
-    let userAgeOnMars = (age*365)/marsYear;
-    let roundedMarsYear=userAgeOnMars.toFixed(2);
+    let userAgeOnMars = Math.round((age*365)/marsYear);
+    let roundedMarsYear = userAgeOnMars;
     return this.roundedMarsYear;
   }
 
   ageOnJupiter(age){
     age = this.age;
     let jupYear = 365 * 11.86;
-    let userAgeOnJup = (age*365)/jupYear;
-    let roundedJupYear = userAgeOnJup.toFixed(2);
+    let userAgeOnJup = Math.round((age*365)/jupYear);
+    let roundedJupYear = userAgeOnJup;
     return this.roundedJupYear;
   }
 };
