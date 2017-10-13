@@ -31,13 +31,13 @@ export class Calculator{
     return this.roundedVenYear;
   }
 
-  // ageOnMercury(age){
-  //   age = this.age;
-  //   let merYear = 365 * .24;
-  //   let userAgeOnMer = (age*365)/merYear;
-  //   let roundedMerYear=userAgeOnMer.toFixed(2);
-  //   return this.roundedMerYear;
-  // }
+  ageOnMars(age){
+    age = this.age;
+    let merYear = 365 * .24;
+    let userAgeOnMer = (age*365)/merYear;
+    let roundedMerYear=userAgeOnMer.toFixed(2);
+    return this.roundedMerYear;
+  }
   //
   // ageOnMercury(age){
   //   age = this.age;
