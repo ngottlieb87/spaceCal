@@ -9,11 +9,10 @@ beforeEach(function(){
 });
 
 it("takes a user age and returns the age in seconds", function(){
-  expect(ageTest.ageInSeconds(ageTest.age)).toEqual(788940000);
+  expect(ageTest.ageInSeconds(ageTest.age)).toEqual(ageTest.ageSeconds);
   })
 
 it("takes a users age and returns there new age in years on Mercury", function(){
-  let userAge = ageTest.ageInSeconds(ageTest.age);
-  expect(ageTest.ageOnMercury(userAge)).toEqual("age on mercury")
+  expect(ageTest.ageOnMercury(ageTest.age)).toEqual(ageTest.roundedMerYear);
   })
 });
