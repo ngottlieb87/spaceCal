@@ -27,7 +27,6 @@ export class Calculator{
     let venYear = 365 * .62;
     let userAgeOnVen = (age*365)/venYear;
     let roundedVenYear=userAgeOnVen.toFixed(2);
-    alert(roundedVenYear);
     return this.roundedVenYear;
   }
 
@@ -38,12 +37,12 @@ export class Calculator{
     let roundedMarsYear=userAgeOnMars.toFixed(2);
     return this.roundedMarsYear;
   }
-  //
-  // ageOnMercury(age){
-  //   age = this.age;
-  //   let merYear = 365 * .24;
-  //   let userAgeOnMer = (age*365)/merYear;
-  //   let roundedMerYear=userAgeOnMer.toFixed(2);
-  //   return this.roundedMerYear;
-  // }
+
+  ageOnJupiter(age){
+    age = this.age;
+    let jupYear = 365 * 11.86;
+    let userAgeOnJup = (age*365)/jupYear;
+    let roundedJupYear = userAgeOnJup.toFixed(2);
+    return this.roundedJupYear;
+  }
 };

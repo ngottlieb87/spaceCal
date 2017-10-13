@@ -23,4 +23,8 @@ describe('Calculator', function() {
   it("takes a users age and returns there new age in years on Mars", function(){
     expect(ageTest.ageOnMars(ageTest.age)).toEqual(ageTest.roundedMarYear);
     })
+
+  it("takes a users age and returns there new age in years on Jupiter", function(){
+    expect(ageTest.ageOnJupiter(ageTest.age)).toEqual(ageTest.roundedJupYear);
+    })
 });
