@@ -10,9 +10,9 @@ export class Calculator{
     return this.age;
   }
 
-  //  currentAge(age){
-  //
-  // }
+   currentAge(age){
+
+  }
 
   ageOnMercury(){
     let merYear = 365 * .24;
@@ -23,6 +23,7 @@ export class Calculator{
   }
 
   ageOnVenus(){
+    alert(this.age)
     let venYear = 365 * .62;
     let userAgeOnVen = Math.round((this.age*365)/venYear);
     let roundedVenYear = userAgeOnVen;

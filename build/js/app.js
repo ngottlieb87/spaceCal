@@ -24,11 +24,9 @@ var Calculator = exports.Calculator = function () {
       this.age = ageSeconds;
       return this.age;
     }
-
-    //  currentAge(age){
-    //
-    // }
-
+  }, {
+    key: "currentAge",
+    value: function currentAge(age) {}
   }, {
     key: "ageOnMercury",
     value: function ageOnMercury() {
@@ -41,6 +39,7 @@ var Calculator = exports.Calculator = function () {
   }, {
     key: "ageOnVenus",
     value: function ageOnVenus() {
+      alert(this.age);
       var venYear = 365 * .62;
       var userAgeOnVen = Math.round(this.age * 365 / venYear);
       var roundedVenYear = userAgeOnVen;
