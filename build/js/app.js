@@ -21,48 +21,48 @@ var Calculator = exports.Calculator = function () {
     value: function ageInSeconds() {
       var earthSeconds = 31557600;
       var ageSeconds = this.age * earthSeconds;
-      this.age = ageSeconds;
-      return this.age;
+      return ageSeconds;
     }
-  }, {
-    key: "currentAge",
-    value: function currentAge(age) {}
+
+    //  currentAge(age){
+    //
+    // }
+
   }, {
     key: "ageOnMercury",
     value: function ageOnMercury() {
+      console.log(this.age);
       var merYear = 365 * .24;
-      var userAgeOnMer = Math.round(this.age * 365 / merYear);
-      var roundedMerYear = userAgeOnMer;
-      this.age = roundedMerYear;
-      return this.age;
+      var roundedMerYear = Math.round(this.age * 365 / merYear);
+      alert(roundedMerYear);
+      return roundedMerYear;
     }
   }, {
     key: "ageOnVenus",
     value: function ageOnVenus() {
-      alert(this.age);
+      console.log(this.age);
       var venYear = 365 * .62;
-      var userAgeOnVen = Math.round(this.age * 365 / venYear);
-      var roundedVenYear = userAgeOnVen;
-      this.age = roundedVenYear;
-      return this.age;
+      var roundedVenYear = Math.round(this.age * 365 / venYear);
+      alert(roundedVenYear);
+      return roundedVenYear;
     }
   }, {
     key: "ageOnMars",
     value: function ageOnMars() {
+      console.log(this.age);
       var marsYear = 365 * 1.88;
-      var userAgeOnMars = Math.round(this.age * 365 / marsYear);
-      var roundedMarsYear = userAgeOnMars;
-      this.age = roundedMarsYear;
-      return this.age;
+      var roundedMarsYear = Math.round(this.age * 365 / marsYear);
+      alert(roundedMarsYear);
+      return roundedMarsYear;
     }
   }, {
     key: "ageOnJupiter",
     value: function ageOnJupiter() {
+      console.log(this.age);
       var jupYear = 365 * 11.86;
-      var userAgeOnJup = Math.round(this.age * 365 / jupYear);
-      var roundedJupYear = userAgeOnJup;
-      this.age = roundedJupYear;
-      return this.age;
+      var roundedJupYear = Math.round(this.age * 365 / jupYear);
+      alert(roundedJupYear);
+      return roundedJupYear;
     }
   }]);
 

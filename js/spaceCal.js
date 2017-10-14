@@ -6,44 +6,43 @@ export class Calculator{
   ageInSeconds(){
     const earthSeconds = 31557600;
     let ageSeconds = this.age * earthSeconds;
-    this.age = ageSeconds;
-    return this.age;
+    return ageSeconds;
   }
 
-   currentAge(age){
-
-  }
+  //  currentAge(age){
+  //
+  // }
 
   ageOnMercury(){
+    console.log(this.age);
     let merYear = 365 * .24;
-    let userAgeOnMer = Math.round((this.age*365)/merYear);
-    let roundedMerYear = userAgeOnMer;
-    this.age = roundedMerYear;
-    return this.age;
+    let roundedMerYear = Math.round((this.age*365)/merYear);
+    alert(roundedMerYear);
+    return roundedMerYear;
+
   }
 
   ageOnVenus(){
-    alert(this.age)
+    console.log(this.age);
     let venYear = 365 * .62;
-    let userAgeOnVen = Math.round((this.age*365)/venYear);
-    let roundedVenYear = userAgeOnVen;
-    this.age = roundedVenYear;
-    return this.age;
+    let roundedVenYear = Math.round((this.age*365)/venYear);
+    alert(roundedVenYear);
+    return roundedVenYear;
   }
 
   ageOnMars(){
+    console.log(this.age);
     let marsYear = 365 * 1.88;
-    let userAgeOnMars = Math.round((this.age*365)/marsYear);
-    let roundedMarsYear = userAgeOnMars;
-    this.age = roundedMarsYear;
-    return this.age;
+    let roundedMarsYear = Math.round((this.age*365)/marsYear);
+    alert(roundedMarsYear);
+    return roundedMarsYear;
   }
 
   ageOnJupiter(){
+    console.log(this.age);
     let jupYear = 365 * 11.86;
-    let userAgeOnJup = Math.round((this.age*365)/jupYear);
-    let roundedJupYear = userAgeOnJup;
-    this.age = roundedJupYear;
-    return this.age;
+    let roundedJupYear = Math.round((this.age*365)/jupYear);
+    alert(roundedJupYear);
+    return roundedJupYear;
   }
 };
