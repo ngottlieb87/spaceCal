@@ -31,4 +31,11 @@ describe('Calculator', function() {
   it("takes a users age and returns there new age in years on Jupiter", function(){
     expect(ageTest.ageOnJupiter()).toEqual(2);
     })
+  it("determines life expectancy based on location and gender.", function(){
+    expect(ageTest.lifeExpect("europe", "female").toEqual(81));
+  })
+
+  it("determines how long the user has to live given their life expecatnacy or lets them know if they've lived passed it.", function(){
+    expect(ageTest.deathCheck(25, 81).toEqaul("You have 56 Years Left. Enjoy Yourself!"));
+  })
 });

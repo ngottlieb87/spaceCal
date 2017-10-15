@@ -9,10 +9,6 @@ export class Calculator{
     return ageSeconds;
   }
 
-  //  currentAge(age){
-  //
-  // }
-
   ageOnMercury(){
     console.log(this.age);
     let merYear = 365 * .24;
@@ -45,4 +41,10 @@ export class Calculator{
     alert(roundedJupYear);
     return roundedJupYear;
   }
+
+  lifeExpect(location, gender){
+    let death = 0;
+    if(gender == "male" && location === "North America")
+  }
+
 };
