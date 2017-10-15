@@ -42,9 +42,34 @@ export class Calculator{
     return roundedJupYear;
   }
 
-  lifeExpect(location, gender){
+  lifeExpect(gender, location){
     let death = 0;
-    if(gender == "male" && location === "North America")
-  }
+    if(gender === "male" && location === "north america"){
+      return death = 77;
+    } else if(gender === "female" && location === "north america"){
+      return death = 81;
+    } else if(gender === "male" && location === "europe"){
+      return death = 75;
+    } else if(gender === "female" && location === "europe"){
+      return death = 81;
+    } else if(gender === "male" && location === "oceania"){
+      return death = 75;
+    } else if(gender === "female" && location === "oceania"){
+      return death = 79;
+    } else if(gender === "male" && location === "latin america"){
+      return death = 73;
+    } else if(gender === "female" && location === "latin america"){
+      return death = 79;
+    } else if(gender === "male" && location === "asia"){
+      return death = 71;
+    } else if(gender === "female" && location === "asia"){
+      return death = 74;
+    } else if(gender === "male" && location === "africa"){
+      return death = 61;
+    } else if(gender === "female" && location === "africa"){
+      return death = 64;
+    }
+    return death;
+  };
 
 };
