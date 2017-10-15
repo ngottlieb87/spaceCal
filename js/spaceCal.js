@@ -13,7 +13,6 @@ export class Calculator{
     console.log(this.age);
     let merYear = 365 * .24;
     let roundedMerYear = Math.round((this.age*365)/merYear);
-    alert(roundedMerYear);
     return roundedMerYear;
 
   }
@@ -22,7 +21,6 @@ export class Calculator{
     console.log(this.age);
     let venYear = 365 * .62;
     let roundedVenYear = Math.round((this.age*365)/venYear);
-    alert(roundedVenYear);
     return roundedVenYear;
   }
 
@@ -30,7 +28,6 @@ export class Calculator{
     console.log(this.age);
     let marsYear = 365 * 1.88;
     let roundedMarsYear = Math.round((this.age*365)/marsYear);
-    alert(roundedMarsYear);
     return roundedMarsYear;
   }
 
@@ -38,7 +35,6 @@ export class Calculator{
     console.log(this.age);
     let jupYear = 365 * 11.86;
     let roundedJupYear = Math.round((this.age*365)/jupYear);
-    alert(roundedJupYear);
     return roundedJupYear;
   }
 
@@ -72,4 +68,13 @@ export class Calculator{
     return death;
   };
 
+  deathCheck(age,death){
+    let tillDeath = death - age;
+    if(tillDeath > 0){
+      return tillDeath;
+    }else if(tillDeath < 0){
+      tillDeath = -tillDeath;
+      return tillDeath;
+    }
+  };
 };

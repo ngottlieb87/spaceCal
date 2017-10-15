@@ -35,7 +35,12 @@ describe('Calculator', function() {
     expect(ageTest.lifeExpect("female", "europe")).toEqual(81);
   })
 
-  // it("determines how long the user has to live given their life expecatnacy or lets them know if they've lived passed it.", function(){
-  //   expect(ageTest.deathCheck(25, 81)).toEqaul("You have 56 Years Left. Enjoy Yourself!");
-  // })
+  it("determines how long the user has to live given their life expectancy", function(){
+    expect(ageTest.deathCheck(ageTest.age, 81)).toEqual(56);
+  })
+  
+  it("determines their age over life expectancy", function(){
+    let borrowTime = new Calculator(90);
+    expect(borrowTime.deathCheck(borrowTime.age, 81)).toEqual(9);
+  })
 });
