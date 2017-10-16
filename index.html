@@ -12,19 +12,40 @@
   <div class= "jumbotron">
     <h1>An Out Of This World Space Calculator</h1>
   </div>
-
-  <h4> Enter Your Current Age and See How Old You Are On Other Planets!</h4>
-  <form id="planets">
-    <label for="planetAge">Enter Age: </label>
-    <input id='planetAge'>
-    <button type="submit">Submit</button>
-  </form>
-
+  <div class = "container">
+    <h4> Enter Your Current Age and See How Old You Are On Other Planets!</h4>
+    <form id="planets">
+      <label for="planetAge">Enter Age: </label>
+      <input id='planetAge'>
+    </form>
+    <br>
     <div id = "output">
       <h3>Your age on Mercury is: <span id = "mer"> </span></h3>
       <h3>Your age on Venus is: <span id = "ven"> </span></h3>
       <h3>Your age on Mars is: <span id = "mars"> </span></h3>
       <h3>Your age on Jupiter is: <span id = "jup"> </span></h3>
     </div>
+    <br>
+    <h4>Check how long you have to live!</h4>
+    <form id= "deathClock">
+      <select id = "gender">
+        <option value = "male">Male</option>
+        <option value = "female">Female</option>
+      </select>
+      <select id = "location">
+        <option value = "north america">north america</option>
+        <option value = "europe">europe</option>
+        <option value = "oceania">oceania</option>
+        <option value = "latin america">latin america</option>
+        <option value = "asia">asia</option>
+        <option value = "africa">africa</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="deathDisplay">
+
+    </div>
+  </div>
   </body>
 </html>
