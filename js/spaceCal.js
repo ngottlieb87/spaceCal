@@ -1,6 +1,7 @@
 export class Calculator{
-  constructor(age){
+  constructor(age, birthday){
     this.age = age;
+    this.birthday = birthday;
   }
 
   ageInSeconds(){
@@ -10,7 +11,6 @@ export class Calculator{
   }
 
   ageOnMercury(){
-    console.log(this.age);
     let merYear = 365 * .24;
     let roundedMerYear = Math.round((this.age*365)/merYear);
     return roundedMerYear;
@@ -18,24 +18,30 @@ export class Calculator{
   }
 
   ageOnVenus(){
-    console.log(this.age);
     let venYear = 365 * .62;
     let roundedVenYear = Math.round((this.age*365)/venYear);
     return roundedVenYear;
   }
 
   ageOnMars(){
-    console.log(this.age);
     let marsYear = 365 * 1.88;
     let roundedMarsYear = Math.round((this.age*365)/marsYear);
     return roundedMarsYear;
   }
 
   ageOnJupiter(){
-    console.log(this.age);
     let jupYear = 365 * 11.86;
     let roundedJupYear = Math.round((this.age*365)/jupYear);
     return roundedJupYear;
+  }
+
+  birthdayCal(){
+    let birthday = new Date(this.birthday);
+    let msBirthday = birthday.getTime();
+    let msCurrent = Date.now();
+    let ageDiffMS = (msCurrent - msBirthday)/1000
+    let diffSeconds = Math.round(ageDiffMS/31557600);
+    return diffSeconds;
   }
 
   lifeExpect(gender, location){

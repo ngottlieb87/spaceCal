@@ -5,16 +5,12 @@ describe('Calculator', function() {
   let ageTest;
 
   beforeEach(function(){
-    ageTest = new Calculator(25);
+    ageTest = new Calculator(25, "1992-11-09");
     });
 
   it("takes a user age and returns the age in seconds", function(){
     expect(ageTest.ageInSeconds()).toEqual(788940000);
     })
-
-  // it("takes a user birthday and return their current age and age in seconds", function(){
-  //   expect(ageTest.currentAge(ageTest.birthday)).toEqual("current age", "age in seconds");
-  // })
 
   it("takes a users age and returns there new age in years on Mercury", function(){
     expect(ageTest.ageOnMercury()).toEqual(104);
@@ -30,7 +26,12 @@ describe('Calculator', function() {
 
   it("takes a users age and returns there new age in years on Jupiter", function(){
     expect(ageTest.ageOnJupiter()).toEqual(2);
-    })
+  })
+
+  it("will take a birthday and determine age",function(){
+    expect(ageTest.birthdayCal(this.birthday)).toEqual(25);
+  })
+
   it("determines life expectancy based on location and gender.", function(){
     expect(ageTest.lifeExpect("female", "europe")).toEqual(81);
   })
@@ -38,9 +39,9 @@ describe('Calculator', function() {
   it("determines how long the user has to live given their life expectancy", function(){
     expect(ageTest.deathCheck(ageTest.age, 81)).toEqual(56);
   })
-  
+
   it("determines their age over life expectancy", function(){
-    let borrowTime = new Calculator(90);
+    let borrowTime = new Calculator(90,"1992-04-09 00:00:00");
     expect(borrowTime.deathCheck(borrowTime.age, 81)).toEqual(9);
   })
 });
