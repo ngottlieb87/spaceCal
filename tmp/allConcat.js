@@ -1,20 +1,20 @@
 import { Calculator } from './../js/spaceCal.js';
 
 $(document).ready(function(){
-  $('#planets').submit(function(){
+  $('#planets').submit(function(event){
     event.preventDefault();
-    let age = parseInt($("#planetAge").val());
+    let birthday = parseInt($("#planetAge").val());
     let gender = $("#gender").val();
-    console.log(gender);
     let location = $("#location").val();
-    console.log(location);
-    let newCalc = new Calculator(age,birthday);
+    let newCalc = new Calculator(birthday);
     let death = newCalc.lifeExpect(gender,location);
+
+    newCalc.birthdayCal();
 
     $("#mer").text(newCalc.ageOnMercury());
     $("#ven").text(newCalc.ageOnVenus());
     $("#mars").text(newCalc.ageOnMars());
     $("#jup").text(newCalc.ageOnJupiter());
-    $("#deathDisplay").text(newCalc.deathCheck(age,death));
+    $("#deathDisplay").text(newCalc.lifeExpectMer(death));
   });
 });
