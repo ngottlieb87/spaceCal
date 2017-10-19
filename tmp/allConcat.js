@@ -7,9 +7,10 @@ $(document).ready(function(){
     let gender = $("#gender").val();
     let location = $("#location").val();
     let newCalc = new Calculator(birthday);
-    let death = newCalc.lifeExpect(gender,location);
 
     newCalc.birthdayCal();
+    
+    let death = newCalc.lifeExpect(gender,location);
 
     $("#display").show();
 
