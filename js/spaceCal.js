@@ -84,43 +84,23 @@ export class Calculator{
   // };
 
   lifeExpectMer(death){
-    let year = Math.round(365 * .24);
-    console.log(year);
-    let newYear = Math.round(death/year);
-    let ageMerYear = Math.round((this.birthday*365)/year);;
-    let lifeDiffMer = ageMerYear-newYear;
-    console.log(lifeDiffMer);
-    return lifeDiffMer;
+    let lifeExpMer = Math.round(death / .24);
+    return lifeExpMer;
   }
 
   lifeExpectVen(death){
-    let year = Math.round(365 * .62);
-    let newYear = Math.round(death/year);
-    let ageVenYear = Math.round((this.birthday*365)/year);;
-    let lifeDiffVen = ageVenYear-newYear;
-    console.log(lifeDiffVen);
-    return lifeDiffVen;
-
+    let lifeExpVen = Math.round(death / .62);
+    return lifeExpVen;
   }
 
   lifeExpectMars(death){
-    let year = Math.round(365 * 1.88);
-    console.log(year);
-    let newYear = Math.round(death/year);
-    let ageMarsYear = Math.round((this.birthday*365)/year);;
-    let lifeDiffMars = ageMarsYear-newYear;
-    console.log(lifeDiffMars);
-    return lifeDiffMars;
+    let lifeExpMars = Math.round(death / 1.88);
+    return lifeExpMars;
   }
 
   lifeExpectJup(death){
-    let year = Math.round(365 * 11.86);
-    console.log(year);
-    let newYear = Math.round(death/year);
-    let ageJupYear = Math.round((this.birthday*365)/year);;
-    let lifeDiffJup = ageJupYear-newYear;
-    console.log(lifeDiffJup);
-    return lifeDiffJup;
+    let lifeExpJup = Math.round(death / 11.86);
+    return lifeExpJup;
 
   }
 };

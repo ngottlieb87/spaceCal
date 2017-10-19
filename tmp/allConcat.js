@@ -10,11 +10,17 @@ $(document).ready(function(){
     let death = newCalc.lifeExpect(gender,location);
 
     newCalc.birthdayCal();
+    
+    $("#display").show();
 
     $("#mer").text(newCalc.ageOnMercury());
     $("#ven").text(newCalc.ageOnVenus());
     $("#mars").text(newCalc.ageOnMars());
     $("#jup").text(newCalc.ageOnJupiter());
-    $("#deathDisplay").text(newCalc.lifeExpectMer(death));
+
+    $("#lifeExpMer").text(newCalc.lifeExpectMer(death));
+    $("#lifeExpVen").text(newCalc.lifeExpectVen(death));
+    $("#lifeExpMars").text(newCalc.lifeExpectMars(death));
+    $("#lifeExpJup").text(newCalc.lifeExpectJup(death));
   });
 });
