@@ -10,7 +10,7 @@ $(document).ready(function(){
     let death = newCalc.lifeExpect(gender,location);
 
     newCalc.birthdayCal();
-    
+
     $("#display").show();
 
     $("#mer").text(newCalc.ageOnMercury());
