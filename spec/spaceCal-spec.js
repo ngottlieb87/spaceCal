@@ -5,7 +5,7 @@ describe('Calculator', function() {
   let ageTest;
 
   beforeEach(function(){
-    ageTest = new Calculator(25, "1992-11-09");
+    ageTest = new Calculator(1992-11-09);
     });
 
   it("takes a user age and returns the age in seconds", function(){
