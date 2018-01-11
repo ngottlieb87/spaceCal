@@ -29,6 +29,8 @@ _Enter a year and see how old you are on other planets. You can also check your 
 
 6. _`gulp build`_
 
+7. _`gulp serve`_
+
 ## Languages Used
 _Javascript, Karma, NPM, Jasmine, Bootstrap, Bower, Gulp_
 ## Support and contact details

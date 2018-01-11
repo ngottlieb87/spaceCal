@@ -14,30 +14,32 @@
       <div class= "jumbotron">
         <h1>An Out Of This World Space Calculator</h1>
       </div>
-      <h4> Enter Your Birthday</h4>
-      <form id="planets">
-        <label for="planetAge">Enter Birthday: </label>
-        <input type="date" id='planetAge' placeholder="yyyy-mm-dd">
+      <div id="all">
+        <h4> Enter Your Birthday</h4>
+        <form id="planets">
+          <label for="planetAge">Enter Birthday: </label>
+          <input type="date" id='planetAge' placeholder="yyyy-mm-dd">
+          <br>
+          <br>
+          <p>Select Your Gender: <span><select id = "gender"></span></p>
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+          </select>
+          <br>
+          <p>Select Your Location: <span><select id = "location" class = "form-control>"></span></p>
+            <option value = "north america">north america</option>
+            <option value = "europe">europe</option>
+            <option value = "oceania">oceania</option>
+            <option value = "latin america">latin america</option>
+            <option value = "asia">asia</option>
+            <option value = "africa">africa</option>
+          </select>
         <br>
-        <br>
-        <p>Select Your Gender: <span><select id = "gender"></span></p>
-          <option value = "male">Male</option>
-          <option value = "female">Female</option>
-        </select>
-        <br>
-        <p>Select Your Location: <span><select id = "location" class = "form-control>"></span></p>
-          <option value = "north america">north america</option>
-          <option value = "europe">europe</option>
-          <option value = "oceania">oceania</option>
-          <option value = "latin america">latin america</option>
-          <option value = "asia">asia</option>
-          <option value = "africa">africa</option>
-        </select>
+        <button id="sub" type="submit" class= "btn btn-primary">Submit</button>
+        </form>
+      </div>
       <br>
-      <button type="submit" class= "btn btn-primary">Submit</button>
-      </form>
-      <br>
-      <div id = "display">
+      <div id = "display" class = "card-body">
         <h2> Age on other planets: </h2>
         <div id = "output">
           <h3>Your age on Mercury is: <span id = "mer"> </span> years old</h3>

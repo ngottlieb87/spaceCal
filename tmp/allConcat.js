@@ -9,11 +9,13 @@ $(document).ready(function(){
     let newCalc = new Calculator(birthday);
 
     newCalc.birthdayCal();
-    
+
     let death = newCalc.lifeExpect(gender,location);
 
-    $("#display").show();
-
+    $("#display").fadeIn(2000);
+    $("#sub").fadeOut(1000);
+    $("#all").slideUp(2000);
+    
     $("#mer").text(newCalc.ageOnMercury());
     $("#ven").text(newCalc.ageOnVenus());
     $("#mars").text(newCalc.ageOnMars());
